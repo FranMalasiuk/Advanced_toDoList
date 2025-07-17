@@ -1,9 +1,9 @@
-📝 Advanced To-Do List
+# 📝 Advanced To-Do List
+
 An advanced and responsive To-Do List web application built with HTML, CSS, and JavaScript, featuring task filtering, editing, persistent storage, and more. Ideal for users who want a sleek and efficient task management experience.
 
-![Advanced_Todo-List](https://github.com/user-attachments/assets/dee44788-58f0-4675-a9cf-bf9f17ac252c)
+## 🔍 Features
 
-🔍 Features
 ✅ Add, edit, and delete tasks
 
 🌗 Light/Dark mode toggle
@@ -20,18 +20,17 @@ An advanced and responsive To-Do List web application built with HTML, CSS, and 
 
 🧹 Clear all tasks button
 
-📸 Preview
-Add a preview gif or screenshot to showcase the UI
-(You can generate a preview.gif showing the usage flow using screen recording tools like ScreenToGif or OBS)
+## 📸 Preview 
+![Advanced_Todo-List](https://github.com/user-attachments/assets/dee44788-58f0-4675-a9cf-bf9f17ac252c)
 
-🚀 Technologies Used
+## 🚀 Technologies Used 
 HTML5 – Markup structure
 
 CSS3 – Responsive styling
 
 JavaScript (ES6+) – Core logic, DOM manipulation, localStorage API
 
-🗂️ Project Structure
+## 🗂️ Project Structure
 bash
 Copiar
 Editar
@@ -40,7 +39,8 @@ Advanced_toDoList/
 ├── style.css           # Stylesheet (light/dark themes)
 ├── scripts.js          # JavaScript logic
 └── README.md           # Project documentation
-🛠️ How to Use
+
+## 🛠️ How to Use
 Clone the repository:
 
 bash
@@ -55,20 +55,11 @@ Start managing your tasks!
 
 Add new tasks, mark them as done, drag to reorder, filter by status, and enjoy dark/light themes.
 
-📦 Storage
+## 📦 Storage
 Tasks are stored in the browser’s localStorage, ensuring that your data persists even after a page reload.
 
-✨ Future Improvements (Suggestions)
-Add task deadline and reminders
-
-Sort by creation date or priority
-
-Sync across devices using backend or cloud storage
-
-Mobile PWA version
-
-🤝 Contributing
+## 🤝 Contributing
 Feel free to fork this repository and submit pull requests if you'd like to improve or expand this project.
 
-📄 License
+## 📄 License
 This project is open-source and available under the MIT License.
