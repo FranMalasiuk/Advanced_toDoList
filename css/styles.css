@@ -1,179 +1,244 @@
-:root {
-  --bg-color: #fdfdfd;
-  --text-color: #333;
-  --primary-color: #102F5e;
-  --done-bg: #393169;
-  --input-bg: #fff;
-}
-
-body.dark {
-  --bg-color: #222;
-  --text-color: #f9f9f9;
-  --primary-color: #1a73e8;
-  --done-bg: #555;
-  --input-bg: #333;
-  background-color: #111;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    color: #333;
+    box-sizing: border-box;
 }
 
 body {
-  background-image: url("../img/Homepage-carousel-1.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  transition: 0.3s;
+    min-height: 100vh;
+    background-image: url("../img/Homepage-carousel-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.todo-container {
-  max-width: 450px;
-  margin: 3rem auto;
-  background-color: var(--bg-color);
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s;
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Fundo escuro */
+    background-image: none;
+    color: #f0f0f0; /* Cor padrão do texto no dark mode */
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-#theme-toggle {
-  padding: 0.3rem 0.8rem;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: filter 0.2s;
-}
-
-#theme-toggle:hover {
-  filter: brightness(1.2);
-}
-
-form {
-  margin-bottom: 1rem;
-}
-
-.form-control {
-  display: flex;
-}
-
-input,
-select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  flex: 1;
-  border-radius: 5px;
-  font-size: 1rem;
-  background-color: var(--input-bg);
-  color: var(--text-color);
-  transition: background-color 0.3s;
-}
-
+/* Botões */
 button {
-  padding: 0.5rem;
-  margin-left: 0.3rem;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: filter 0.2s;
+    background-color: #fdfdfd;
+    color: #102F5e;
+    border: 2px solid #102F5e;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
 }
 
 button:hover {
-  filter: brightness(1.2);
+    background-color: #102F5e;
+    color: #fff;
 }
 
-#cancel-edit-btn {
-  margin-top: 1rem;
-  background-color: #999;
+button:hover > i {
+    color: #fff;
+}
+
+button i {
+    color: #102F5e;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* Botões no Dark Mode */
+body.dark-mode button {
+    background-color: #333; /* Fundo mais escuro para botões */
+    color: #f0f0f0; /* Texto claro para botões */
+    border-color: #555; /* Borda mais visível */
+}
+
+body.dark-mode button:hover {
+    background-color: #555; /* Fundo um pouco mais claro no hover */
+    color: #fff;
+}
+
+body.dark-mode button i {
+    color: #f0f0f0; /* Ícones claros */
+}
+
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
 }
 
 .hide {
-  display: none;
+    display: none;
+}
+
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+/* Todo Container no Dark Mode */
+body.dark-mode .todo-container {
+    background-color: #1e1e1e; /* Fundo do container ligeiramente mais claro que o body */
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Header e textos no Dark Mode */
+body.dark-mode .todo-container header h1,
+body.dark-mode .todo-container header p,
+body.dark-mode #todo-form p,
+body.dark-mode #edit-form p,
+body.dark-mode #search h4,
+body.dark-mode #filter h4 {
+    color: #f0f0f0; /* Textos e labels em branco ou cinza bem claro */
+}
+
+body.dark-mode .todo-container header {
+    border-bottom: 1px solid #333; /* Borda mais visível */
+}
+
+#todo-form,
+#edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Formulários no Dark Mode */
+body.dark-mode #todo-form,
+body.dark-mode #edit-form {
+    border-bottom: 1px solid #333; /* Borda mais visível */
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+/* Input Placeholder no Dark Mode */
+body.dark-mode input::placeholder {
+    color: #a9a9a9; /* Placeholder em um cinza médio */
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
 }
 
 #toolbar {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
 }
 
-#search,
+/* Toolbar no Dark Mode */
+body.dark-mode #toolbar {
+    border-bottom: 1px solid #333; /* Borda mais visível */
+}
+
+#toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+#search {
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search no Dark Mode */
+body.dark-mode #search {
+    border-right: 1px solid #333; /* Borda mais visível */
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
 #filter {
-  flex: 1;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    flex: 1;
 }
 
 .todo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--input-bg);
-  border: 1px solid #ddd;
-  padding: 0.8rem;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-  transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
 }
 
-.todo.dragging {
-  opacity: 0.6;
-  background-color: #e0e0e0;
+/* Todo Item no Dark Mode */
+body.dark-mode .todo {
+    border-bottom: 1px solid #333; /* Borda mais visível */
 }
 
 .todo h3 {
-  flex: 1;
-  font-size: 1rem;
-  color: var(--text-color);
-  word-break: break-word;
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+/* Título da Tarefa no Dark Mode */
+body.dark-mode .todo h3 {
+    color: #f0f0f0; /* Texto da tarefa em branco ou cinza claro */
 }
 
 .todo button {
-  margin-left: 0.3rem;
-  background-color: transparent;
-  color: var(--primary-color);
+    margin-left: 0.4rem;
 }
 
-.todo.done {
-  background-color: var(--done-bg);
+.done {
+    background-color: #393169;
 }
 
-.todo.done h3 {
-  color: #fff;
-  text-decoration: line-through;
+.done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
 }
 
-@media (max-width: 500px) {
-  .todo-container {
-    margin: 1rem;
-  }
-
-  header h1 {
-    font-size: 1.2rem;
-  }
-
-  input {
-    font-size: 0.9rem;
-  }
+/* Tarefa Completa (Done) no Dark Mode */
+body.dark-mode .todo.done {
+    background-color: #2f2b58; /* Fundo da tarefa completa */
 }
 
-label {
-  color: var(--text-color);
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.3rem;
+body.dark-mode .todo.done h3 {
+    color: #ccc; /* Texto da tarefa completa (pode clarear mais se precisar) */
+}
+
+.sortable-ghost {
+    opacity: 0.4;
 }
