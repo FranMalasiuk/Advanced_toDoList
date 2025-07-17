@@ -1,0 +1,179 @@
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #333;
+  --primary-color: #102F5e;
+  --done-bg: #393169;
+  --input-bg: #fff;
+}
+
+body.dark {
+  --bg-color: #222;
+  --text-color: #f9f9f9;
+  --primary-color: #1a73e8;
+  --done-bg: #555;
+  --input-bg: #333;
+  background-color: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-image: url("../img/Homepage-carousel-1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+.todo-container {
+  max-width: 450px;
+  margin: 3rem auto;
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+#theme-toggle {
+  padding: 0.3rem 0.8rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+#theme-toggle:hover {
+  filter: brightness(1.2);
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: flex;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  flex: 1;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s;
+}
+
+button {
+  padding: 0.5rem;
+  margin-left: 0.3rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+#cancel-edit-btn {
+  margin-top: 1rem;
+  background-color: #999;
+}
+
+.hide {
+  display: none;
+}
+
+#toolbar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+#search,
+#filter {
+  flex: 1;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--input-bg);
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.todo.dragging {
+  opacity: 0.6;
+  background-color: #e0e0e0;
+}
+
+.todo h3 {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-color);
+  word-break: break-word;
+}
+
+.todo button {
+  margin-left: 0.3rem;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.todo.done {
+  background-color: var(--done-bg);
+}
+
+.todo.done h3 {
+  color: #fff;
+  text-decoration: line-through;
+}
+
+@media (max-width: 500px) {
+  .todo-container {
+    margin: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+}
+
+label {
+  color: var(--text-color);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
