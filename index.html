@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced To Do List</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="todo-container">
+    <header>
+      <h1>Advanced To Do List</h1>
+      <button id="theme-toggle">🌞 Light Mode</button>
+    </header>
+
+    <!-- Formulário principal -->
+    <form id="todo-form">
+      <label for="todo-input">Add your task:</label>
+      <div class="form-control">
+        <input type="text" id="todo-input" placeholder="What do you need to do?" />
+        <button type="submit" id="add-btn">+</button>
+      </div>
+    </form>
+
+    <!-- Barra de ferramentas -->
+    <div id="toolbar">
+      <div>
+        <label for="search-input">Search:</label>
+        <input type="text" id="search-input" placeholder="Search" />
+      </div>
+      <div>
+        <label for="filter-select">Filter:</label>
+        <select id="filter-select">
+          <option value="all">All tasks</option>
+          <option value="done">Done</option>
+          <option value="todo">To do</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Formulário de edição -->
+    <form id="edit-form" class="hide">
+      <label for="edit-input">Edit task:</label>
+      <div class="form-control">
+        <input type="text" id="edit-input" />
+        <button type="submit">Update</button>
+      </div>
+      <button id="cancel-edit-btn" type="button">Cancel</button>
+    </form>
+
+    <!-- Lista de tarefas -->
+    <div id="todo-list"></div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
